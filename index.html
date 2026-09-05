@@ -5,8 +5,10 @@
         <title>Tienda de Libros</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
+        
     </head>
 
+    
     <body>
 
         <header>
@@ -16,17 +18,18 @@
 
 
         <section class="LoginInicioSesion" id="login">
-            <form>
+            <form id="formLogin">
                 <h2>Inicio Secion</h2>
                 <label for="correo"> Correo Electronico</label>
-                <input type="email" id="correo" >
+                <input type="email" id="correo" required>
+                <span id="errorCorreo" class="mensaje-error"></span>
                 <label for="contrasenia">Contraseña</label>
-                <input type="password" id="contrasenia" href="registro.html">
+                <input type="password" id="contrasenia" required>
+                <span id="errorContrasenia" class="mensaje-error"></span>
                 <button type="submit">Iniciar Sesion</button>
             </form>
         </section>
-
-
+        <script src="assets/js/validaciones.js"></script>
     </body>
 
 

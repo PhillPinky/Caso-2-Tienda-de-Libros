@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tienda de Libros</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="registroFondo">
+            <form id="formRegistro">
+                <div class="nombreCampo">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                    <span class="error-mensaje" id="errorNombre"></span>
+                </div>
+
+                <div class="correoCampo">
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" id="correo" required>
+                    <span class="error-mensaje" id="errorCorreo"></span>
+                </div>
+
+
+                <div class="contraseniaCampo">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" name="contrasenia" id="contrasenia" required>
+                    <span class="error-mensaje" id="errorContrasenia"></span>
+                </div>
+
+                <div class="confirmarContraseniaCampo">
+                    <label for="confirmarContrasenia">Confirmar Contraseña</label>
+                    <input type="password" name="confirmarContrasenia" id="confirmarContrasenia" required>
+                    <span class="error-mensaje" id="errorConfirmarContrasenia"></span>
+                </div>
+
+                <div class="telefonoCampo">
+                    <label for="telefono">Teléfono (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono">
+                    <span class="error-mensaje" id="errorTelefono"></span>
+                </div>
+
+                <div class="seccionGenero">
+                    <h3>Tipo de Género</h3>
+                    <div class="opcionGenero">
+                        <label class="opcionFiccion">
+                            <input type="checkbox" name="generos[]" value="ficcion"> Ficción
+                        </label>
+                        <label class="opcionTerror">
+                            <input type="checkbox" name="generos[]" value="terror"> Terror
+                        </label>
+                        <label class="opcionMisterio">
+                            <input type="checkbox" name="generos[]" value="misterio"> Misterio
+                        </label>
+                        <label class="opcionHistorico">
+                            <input type="checkbox" name="generos[]" value="historico"> Histórico
+                        </label>
+                        <label class="opcionFantasia">
+                            <input type="checkbox" name="generos[]" value="fantasia"> Fantasía
+                        </label>
+                        <label class="opcionAventura">
+                            <input type="checkbox" name="generos[]" value="aventura"> Aventura
+                        </label>
+                        <label class="opcionCienciaFiccion">
+                            <input type="checkbox" name="generos[]" value="ciencia_ficcion"> Ciencia Ficción
+                        </label>
+                        <label class="opcionBiografia">
+                            <input type="checkbox" name="generos[]" value="biografia"> Biografía
+                        </label>
+                        <label class="opcionRomance">
+                            <input type="checkbox" name="generos[]" value="romance"> Romance
+                        </label>
+                    </div>
+                    <span class="error-mensaje" id="errorGeneros"></span>
+
+                    <div class="acciones">
+                        <button type="submit" class="btn-registrar">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="assets/js/validaciones.js"></script>
+        
+    </body>
+</html>
