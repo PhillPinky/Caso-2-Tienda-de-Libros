@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar Productos - Gourmet Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <div class="admin-logo">Gourmet Hub Admin</div>
+      <nav>
+        <ul>
+          <li><a href="adminHome.html">Inicio</a></li>
+          <li><a href="adminProductos.html">Productos</a></li>
+          <li><a href="adminUsuarios.html">Usuarios</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="admin-salir">&larr; Salir al sitio</a>
+    </aside>
+
+    <main class="admin-content">
+      <header class="admin-topbar">
+        <h1>Productos</h1>
+        <a href="adminProductoNuevo.html" class="btn-principal">+ Nuevo Producto</a>
+      </header>
+
+      <table class="admin-tabla">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Categoría</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>P001</td>
+            <td>Aceite de Oliva Extra Virgen</td>
+            <td>$12.990</td>
+            <td>50</td>
+            <td>Aceites</td>
+            <td>
+              <a href="adminProductoNuevo.html?id=P001">Editar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>P002</td>
+            <td>Sal de Mar Trufada</td>
+            <td>$8.990</td>
+            <td>30</td>
+            <td>Condimentos</td>
+            <td>
+              <a href="adminProductoNuevo.html?id=P002">Editar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+  </div>
+
+</body>
+</html>

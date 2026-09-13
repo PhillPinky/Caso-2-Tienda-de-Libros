@@ -1,87 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Tienda de Libros</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario - Gourmet Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-    <body>
-        <div class="registroFondo">
-            <form id="formRegistro">
-                <div class="nombreCampo">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" name="nombre" id="nombre" required>
-                    <span class="error-mensaje" id="errorNombre"></span>
-                </div>
+  <header>
+        <div class="logo">
+        <img src="img/logo.png" alt="Logo Gourmet Hub">
+        <span>Gourmet Hub</span>
+        </div>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+            <li><a href="login.html">Iniciar sesión</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="adminHome.html">Panel Administrador</a></li>
 
-                <div class="correoCampo">
-                    <label for="correo">Correo</label>
-                    <input type="email" name="correo" id="correo" required>
-                    <span class="error-mensaje" id="errorCorreo"></span>
-                </div>
+        </ul>
+        </nav>
+        <a href="carrito.html" class="cart-link"> Carrito :3!! (<span id="cart-count">0</span>)</a>
+    </header>
 
 
-                <div class="contraseniaCampo">
-                    <label for="contrasenia">Contraseña</label>
-                    <input type="password" name="contrasenia" id="contrasenia" required>
-                    <span class="error-mensaje" id="errorContrasenia"></span>
-                </div>
+  <main>
+    <section class="registro-section">
+      <h1>Registro de Usuario</h1>
 
-                <div class="confirmarContraseniaCampo">
-                    <label for="confirmarContrasenia">Confirmar Contraseña</label>
-                    <input type="password" name="confirmarContrasenia" id="confirmarContrasenia" required>
-                    <span class="error-mensaje" id="errorConfirmarContrasenia"></span>
-                </div>
+      <form id="form-registro" novalidate>
 
-                <div class="telefonoCampo">
-                    <label for="telefono">Teléfono (opcional)</label>
-                    <input type="tel" id="telefono" name="telefono">
-                    <span class="error-mensaje" id="errorTelefono"></span>
-                </div>
-
-                <div class="seccionGenero">
-                    <h3>Tipo de Género</h3>
-                    <div class="opcionGenero">
-                        <label class="opcionFiccion">
-                            <input type="checkbox" name="generos[]" value="ficcion"> Ficción
-                        </label>
-                        <label class="opcionTerror">
-                            <input type="checkbox" name="generos[]" value="terror"> Terror
-                        </label>
-                        <label class="opcionMisterio">
-                            <input type="checkbox" name="generos[]" value="misterio"> Misterio
-                        </label>
-                        <label class="opcionHistorico">
-                            <input type="checkbox" name="generos[]" value="historico"> Histórico
-                        </label>
-                        <label class="opcionFantasia">
-                            <input type="checkbox" name="generos[]" value="fantasia"> Fantasía
-                        </label>
-                        <label class="opcionAventura">
-                            <input type="checkbox" name="generos[]" value="aventura"> Aventura
-                        </label>
-                        <label class="opcionCienciaFiccion">
-                            <input type="checkbox" name="generos[]" value="ciencia_ficcion"> Ciencia Ficción
-                        </label>
-                        <label class="opcionBiografia">
-                            <input type="checkbox" name="generos[]" value="biografia"> Biografía
-                        </label>
-                        <label class="opcionRomance">
-                            <input type="checkbox" name="generos[]" value="romance"> Romance
-                        </label>
-                    </div>
-                    <span class="error-mensaje" id="errorGeneros"></span>
-
-                    <div class="acciones">
-                        <button type="submit" class="btn-registrar">Registrar</button>
-                    </div>
-                </div>
-            </form>
+      
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required
+                 minlength="3" maxlength="70"
+                 placeholder="Ej: María Pérez">
+          <span class="error-msg" id="error-nombre"></span>
         </div>
 
-        <script src="assets/js/validaciones.js"></script>
-        
-    </body>
+        <div class="form-group">
+          <label for="correo">Correo electrónico (institucional @duoc.cl)</label>
+          <input type="email" id="correo" name="correo" required
+                 maxlength="60"
+                 placeholder="nombre@duoc.cl">
+          <span class="error-msg" id="error-correo"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required
+                 minlength="10"
+                 placeholder="Mínimo 10 caracteres">
+          <span class="error-msg" id="error-password"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password-confirm">Confirmar contraseña</label>
+          <input type="password" id="password-confirm" name="password-confirm" required>
+          <span class="error-msg" id="error-password-confirm"></span>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Restricciones alimentarias</legend>
+
+          <label><input type="checkbox" name="restriccion" value="celiaco"> Celíaco</label>
+          <label><input type="checkbox" name="restriccion" value="vegano"> Vegano</label>
+          <label><input type="checkbox" name="restriccion" value="vegetariano"> Vegetariano</label>
+          <label><input type="checkbox" name="restriccion" value="lactosa"> Intolerante a la Lactosa</label>
+          <label><input type="checkbox" name="restriccion" value="frutos-secos"> Frutos Secos</label>
+          <label><input type="checkbox" name="restriccion" value="ninguna" id="restriccion-ninguna"> Ninguna</label>
+          <span class="error-msg" id="error-restriccion"></span>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Recetas de interés</legend>
+
+          <div id="recetas-container">
+          </div>
+
+          <button type="button" id="btn-agregar-receta">+ Agregar receta de interés</button>
+          <span class="error-msg" id="error-recetas"></span>
+        </fieldset>
+
+        <template id="template-receta">
+          <div class="receta-item">
+            <label>
+              Categoría
+              <select name="categoria-receta" required>
+                <option value=""> Seleccione </option>
+                <option value="pasteleria">Pastelería</option>
+                <option value="cocina-italiana">Cocina Italiana</option>
+                <option value="reposteria">Repostería</option>
+                <option value="cocina-oriental">Cocina Oriental</option>
+                <option value="barismo">Barismo</option>
+              </select>
+            </label>
+
+            <span>Nivel de experiencia:</span>
+            <label><input type="radio" name="nivel-receta" value="principiante" required> Principiante</label>
+            <label><input type="radio" name="nivel-receta" value="intermedio"> Intermedio</label>
+            <label><input type="radio" name="nivel-receta" value="avanzado"> Avanzado</label>
+
+            <button type="button" class="btn-quitar-receta">Quitar</button>
+          </div>
+        </template>
+
+        <button type="submit" id="btn-registrar">Registrar</button>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gourmet Hub. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/registro.js"></script>
+</body>
 </html>

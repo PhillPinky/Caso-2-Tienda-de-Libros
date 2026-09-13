@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Usuario - Gourmet Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <div class="admin-logo">Gourmet Hub Admin</div>
+      <nav>
+        <ul>
+          <li><a href="adminHome.html">Inicio</a></li>
+          <li><a href="adminProductos.html">Productos</a></li>
+          <li><a href="adminUsuarios.html">Usuarios</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="admin-salir">&larr; Salir al sitio</a>
+    </aside>
+
+    <main class="admin-content">
+      <header class="admin-topbar">
+        <h1>Nuevo Usuario</h1>
+      </header>
+
+      <form id="form-usuario-admin" class="admin-form" novalidate>
+
+        <div class="form-group">
+          <label for="us-run">RUN (sin puntos ni guión)</label>
+          <input type="text" id="us-run" name="run" required minlength="7" maxlength="9" placeholder="19011022K">
+        </div>
+
+        <div class="form-group">
+          <label for="us-nombre">Nombre</label>
+          <input type="text" id="us-nombre" name="nombre" required maxlength="50">
+        </div>
+
+        <div class="form-group">
+          <label for="us-apellidos">Apellidos</label>
+          <input type="text" id="us-apellidos" name="apellidos" required maxlength="100">
+        </div>
+
+        <div class="form-group">
+          <label for="us-correo">Correo</label>
+          <input type="email" id="us-correo" name="correo" required maxlength="100" placeholder="nombre@duoc.cl">
+        </div>
+
+        <div class="form-group">
+          <label for="us-fecha-nacimiento">Fecha de nacimiento</label>
+          <input type="date" id="us-fecha-nacimiento" name="fecha-nacimiento">
+        </div>
+
+        <div class="form-group">
+          <label for="us-tipo">Tipo de usuario</label>
+          <select id="us-tipo" name="tipo" required>
+            <option value="">-- Seleccione --</option>
+            <option value="administrador">Administrador</option>
+            <option value="cliente">Cliente</option>
+            <option value="vendedor">Vendedor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="us-region">Región</label>
+          <select id="us-region" name="region" required>
+            <option value="">-- Seleccione región --</option>
+            <option value="rm">Región Metropolitana de Santiago</option>
+            <option value="araucania">Región de la Araucanía</option>
+            <option value="nuble">Región de Ñuble</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="us-comuna">Comuna</label>
+          <select id="us-comuna" name="comuna" required>
+            <option value="">-- Seleccione comuna --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="us-direccion">Dirección</label>
+          <input type="text" id="us-direccion" name="direccion" required maxlength="300">
+        </div>
+
+        <button type="submit">Guardar Usuario</button>
+      </form>
+    </main>
+
+  </div>
+
+</body>
+</html>

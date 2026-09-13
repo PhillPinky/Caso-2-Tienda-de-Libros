@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gourmet Hub - Insumos Gastronómicos Premium</title>
+  <title>Productos - Gourmet Hub</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -22,6 +22,7 @@
             <li><a href="login.html">Iniciar sesión</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="blogs.html">Blogs</a></li>
+          
             <li><a href="adminHome.html">Panel Administrador</a></li>
         </ul>
         </nav>
@@ -29,37 +30,21 @@
     </header>
 
 
+
   <main>
-    <section class="hero">
-      <div class="hero-texto">
-        <h1>Insumos gourmet para tu cocina</h1>
-        <p>Ingredientes de alta gama y talleres de cocina en línea.</p>
-        <a href="productos.html" class="btn-principal">Ver productos</a>
-      </div>
-      <img src="img/hero.jpg" alt="Insumos gastronómicos gourmet">
-    </section>
-
-    <section class="productos-destacados">
-      <h2>Productos destacados</h2>
-      <div class="grid-productos">
-
-        <article class="producto-card">
-          <img src="img/producto1.gif" alt="Carne de res">
-          <h3>Carne de res</h3>
-          <p class="precio">$12.990</p>
-        </article>
-
+    <section>
+      <h1>Productos</h1>
+      <div id="productos-container" class="productos-grid">
       </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Gourmet Hub. Todos los derechos reservados.</p>
-    <nav>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
   </footer>
 
+  <script src="js/dataProducto.js"></script>
+  <script src="js/carritoLocalStorage.js"></script>
+  <script src="js/producto.js"></script>
 </body>
 </html>

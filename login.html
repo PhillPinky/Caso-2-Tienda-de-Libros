@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gourmet Hub - Insumos Gastronómicos Premium</title>
+  <title>Iniciar Sesión - Gourmet Hub</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -29,31 +29,37 @@
     </header>
 
 
+
   <main>
-    <section class="hero">
-      <div class="hero-texto">
-        <h1>Insumos gourmet para tu cocina</h1>
-        <p>Ingredientes de alta gama y talleres de cocina en línea.</p>
-        <a href="productos.html" class="btn-principal">Ver productos</a>
-      </div>
-      <img src="img/hero.jpg" alt="Insumos gastronómicos gourmet">
-    </section>
+    <section class="login-section">
+      <img src="img/logo.png" alt="Logo Gourmet Hub" class="login-logo">
+      <h1>Gourmet Hub</h1>
 
-    <section class="productos-destacados">
-      <h2>Productos destacados</h2>
-      <div class="grid-productos">
+      <form id="form-login" novalidate>
 
-        <article class="producto-card">
-          <img src="img/producto1.gif" alt="Carne de res">
-          <h3>Carne de res</h3>
-          <p class="precio">$12.990</p>
-        </article>
+        <div class="form-group">
+          <label for="login-correo">Correo electrónico</label>
+          <input type="email" id="login-correo" name="correo" required
+                 maxlength="100"
+                 placeholder="nombre@duoc.cl">
+          <span class="error-msg" id="error-login-correo"></span>
+        </div>
 
-      </div>
+        <div class="form-group">
+          <label for="login-password">Contraseña</label>
+          <input type="password" id="login-password" name="password" required
+                 minlength="4" maxlength="10"
+                 placeholder="Entre 4 y 10 caracteres">
+          <span class="error-msg" id="error-login-password"></span>
+        </div>
+
+        <button type="submit" id="btn-login">Iniciar sesión</button>
+
+      </form>
     </section>
   </main>
 
-  <footer>
+   <footer>
     <p>&copy; 2026 Gourmet Hub. Todos los derechos reservados.</p>
     <nav>
       <a href="nosotros.html">Nosotros</a>
@@ -61,5 +67,7 @@
     </nav>
   </footer>
 
+
+  <script src="js/login.js"></script>
 </body>
 </html>

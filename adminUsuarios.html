@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar Usuarios - Gourmet Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <div class="admin-logo">Gourmet Hub Admin</div>
+      <nav>
+        <ul>
+          <li><a href="adminHome.html">Inicio</a></li>
+          <li><a href="adminProductos.html">Productos</a></li>
+          <li><a href="adminUsuarios.html">Usuarios</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="admin-salir">&larr; Salir al sitio</a>
+    </aside>
+
+    <main class="admin-content">
+      <header class="admin-topbar">
+        <h1>Usuarios</h1>
+        <a href="adminUsuarioNuevo.html" class="btn-principal">+ Nuevo Usuario</a>
+      </header>
+
+      <table class="admin-tabla">
+        <thead>
+          <tr>
+            <th>RUN</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Tipo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>19011022K</td>
+            <td>Valentina Gallina Fea xd</td>
+            <td>valentina@duoc.cl</td>
+            <td>Cliente</td>
+            <td><a href="adminUsuarioNuevo.html?run=19011022K">Editar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+  </div>
+
+</body>
+</html>
